@@ -1,12 +1,12 @@
 <div>
     <input wire:model.debounce.1000ms="name" type="text">
     <input wire:model="loud" type="checkbox">
-    <select wire:model="greeting" id="">
+    <select wire:model="greeting" multiple>
         <option>Hello</option>
         <option>Goodbye</option>
         <option>Adios</option>
     </select>
 
 
-    {{ $greeting }} {{ strtoupper($name) }} @if ($loud) ! @endif
+    {{ implode(', ', $greeting) }} {{ strtoupper($name) }} @if ($loud) ! @endif
 </div>
