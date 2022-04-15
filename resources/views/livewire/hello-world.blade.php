@@ -1,5 +1,5 @@
 <div>
-    <input wire:model.debounce.1000ms="name" type="text">
+    <input wire:model="name" type="text">
     <input wire:model="loud" type="checkbox">
     <select wire:model="greeting" multiple>
         <option>Hello</option>
@@ -9,4 +9,6 @@
 
 
     {{ implode(', ', $greeting) }} {{ strtoupper($name) }} @if ($loud) ! @endif
+
+    <button wire:click="resetName('Ndet')">Reset Name</button>
 </div>
