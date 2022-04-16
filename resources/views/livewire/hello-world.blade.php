@@ -10,5 +10,9 @@
 
     {{ implode(', ', $greeting) }} {{ strtoupper($name) }} @if ($loud) ! @endif
 
-    <button wire:click="resetName('Ndet')">Reset Name</button>
+    {{-- <button wire:click="resetName($event.target.innerText)">Reset Name</button> this is livewire event --}}
+
+    <form action="#" wire:submit.prevent="resetName('Ndet')">
+        <button>Reset Name</button>
+    </form>
 </div>
