@@ -12,7 +12,7 @@
 
     {{-- <button wire:click="resetName($event.target.innerText)">Reset Name</button> this is livewire event --}}
 
-    <form action="#" wire:submit.prevent="resetName('Ndet')">
+    <form action="#" wire:submit.prevent="$set('name', 'Bingo')">
         <button>Reset Name</button>
     </form>
 </div>
